@@ -4,6 +4,33 @@
   
     
     <entry>
+      <title>test</title>
+      <link href="/2023/09/28/vue-wen-ti-bi-ji-9.28-fu-ben/"/>
+      <url>/2023/09/28/vue-wen-ti-bi-ji-9.28-fu-ben/</url>
+      
+        <content type="html"><![CDATA[<h1 id="关于Vue使用渲染echarts图出现数据ob-Observer"><a href="#关于Vue使用渲染echarts图出现数据ob-Observer" class="headerlink" title="关于Vue使用渲染echarts图出现数据ob: Observer"></a>关于Vue使用渲染echarts图出现数据ob: Observer</h1><!-- toc -->&gt;<p>一开始将数据处理完成后我将数据初始化函数放到了created里，将图表渲染函数放到了mounted，因为我上网查到created是比mounted先开始的，但发现数据无法到图表里。consolo一下发现ob: Observer，一开始以为是这个原因弄了半天，然后在网上查echarts ob：observer，发现有相同情况的人，最终结案：虽然created是比mounted快，但因为异步的原因，请求数据比较慢，图表在渲染的时候后台还没有请求到数据，所以就是空白的，统计图的渲染要放在而是在后台数据请求完成之后再渲染。<br>如图<br><img src="/../images/9.28.png" alt="图片"><br><strong>所以查百度的时候一定要把握问题的关键，不要少东西少一点条件就抓不住了</strong></p><h2 id="2"><a href="#2" class="headerlink" title="2"></a>2</h2><h3 id="2-1"><a href="#2-1" class="headerlink" title="2.1"></a>2.1</h3><h2 id="3"><a href="#3" class="headerlink" title="3"></a>3</h2><h2 id="4"><a href="#4" class="headerlink" title="4"></a>4</h2>]]></content>
+      
+      
+      <categories>
+          
+          <category> vue学习笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> vue </tag>
+            
+            <tag> echarts </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vue学习笔记(__ob_ Observer echarts)</title>
       <link href="/2023/09/28/vue-wen-ti-bi-ji-9.28/"/>
       <url>/2023/09/28/vue-wen-ti-bi-ji-9.28/</url>
