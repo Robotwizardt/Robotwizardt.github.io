@@ -487,7 +487,9 @@ ul li a {
 .subject li.front-end {
     color: blue;
 }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>后代选择器，最终选择的是后代，不选中祖先<br>儿子、孙子、重孙子都算是后代<br>结构一定要符合之前讲的 HTML 嵌套要求，例如：不能在p中写 h1 ~ h6</p>
+<p>后代选择器，最终选择的是后代，不选中祖先</p>
+<p><u>儿子、孙子、重孙子都算是后代</u></p>
+<p>结构一定要符合之前讲的 HTML 嵌套要求，例如：不能在p中写 h1 ~ h6</p>
 <h3 id="2-4-子代选择器"><a href="#2-4-子代选择器" class="headerlink" title="2.4 子代选择器"></a>2.4 子代选择器</h3><p>选择器1 &gt; 选择器2 &gt; 选择器3 &gt; …… 选择器n {}<br>选择器之间，用 &gt; 隔开<br>选择器 1 2 3 4…n ，可以是上面学的任何一种选择器</p>
 <pre class="line-numbers language-none"><code class="language-none">/* div中的子代a元素 */
 div&gt;a {
