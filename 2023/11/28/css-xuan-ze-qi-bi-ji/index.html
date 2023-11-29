@@ -406,14 +406,14 @@ class 值，按照标准：不要使用纯数字，">
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    234
+                    675
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -450,7 +450,41 @@ h1{
 <h3 id="1-4-id选择器"><a href="#1-4-id选择器" class="headerlink" title="1.4 id选择器"></a>1.4 id选择器</h3><pre class="line-numbers language-none"><code class="language-none">#id{
     }<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>id 属性值：尽量由字母、数字、下划线( _ )、短杠( - )组成，最好以字母开头，不要包含空格，区分大小写<br>一个元素只能拥有一个 id 属性，多个元素的 id 属性值不能相同一个元素可以同时拥有 id 和 class 属性</p>
-<h2 id="2复合选择器"><a href="#2复合选择器" class="headerlink" title="2复合选择器"></a>2复合选择器</h2>
+<h2 id="2复合选择器"><a href="#2复合选择器" class="headerlink" title="2复合选择器"></a>2复合选择器</h2><h3 id="2-1-交集选择器"><a href="#2-1-交集选择器" class="headerlink" title="2.1 交集选择器"></a>2.1 交集选择器</h3><p>选中同时符合多个条件的元素<br><strong>选择器1选择器2选择器3…选择器n {}</strong></p>
+<pre class="line-numbers language-none"><code class="language-none">/* 选中：类名为beauty的p元素，为此种写法用的非常多！ */
+p.beauty {
+    color: blue;
+}
+/* 选中：类名包含rich和beauty的元素 */
+.rich.beauty {
+    color: green;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>有标签名，<strong>标签名必须写在前面</strong><br>id 选择器、通配选择器，理论上可以作为交集的条件，但实际应用中几乎不用 —— 因为没有意义<br>交集选择器中不可能出现两个元素选择器，因为一个元素，不可能即是 p 元素又是 span元素<br>用的最多的交集选择器是：<strong>元素选择器配合类名选择器</strong>，例如： p.beauty</p>
+<h3 id="2-2并集选择器"><a href="#2-2并集选择器" class="headerlink" title="2.2并集选择器"></a>2.2并集选择器</h3><p>选中多个选择器对应的元素，又称分组选择器</p>
+<pre class="line-numbers language-none"><code class="language-none">/* 选中：类名为beauty的p元素，为此种写法用的非常多！ */
+p.beauty {
+    color: blue;
+}
+/* 选中：类名包含rich和beauty的元素 */
+.rich.beauty {
+    color: green;
+}<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>并集选择器一般竖着写，用逗号隔开。并集选择器，通常用于集体声明，可以缩小样式表体积<br>任何形式的选择器，都可以作为并集选择器的一部分<br>HTML元素间的关系</p>
+<pre><code>父元素：直接包裹某个元素的元素，就是该元素的父元素
+
+子元素：被父元素直接包含的元素
+
+祖先元素：父亲的父亲.......，一直往外找，都是祖先
+
+父元素，也算是祖先元素的一种
+
+后代元素：儿子的儿子......，一直往里找，都是后代
+
+子元素，也算是后代元素的一种
+
+兄弟元素：具有相同父元素的元素，互为兄弟元素
+</code></pre>
+<h3 id="2-3-后代选择器"><a href="#2-3-后代选择器" class="headerlink" title="2.3 后代选择器"></a>2.3 后代选择器</h3>
                 
             </div>
             <hr/>
